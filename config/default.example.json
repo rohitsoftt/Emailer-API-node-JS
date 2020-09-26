@@ -1,0 +1,46 @@
+{
+    "app": {
+        "port": 8080
+    },
+    "clients": {
+        "B2BTEI": {
+            "name": "Clinet Name",
+            "expiryinDays": 20,
+            "isActive": true,
+            "emailconfig":{
+                "username": "example@email.com",
+                "password": "password",
+                "smtp": "smtp.gmail.com",
+                "smtpPort": "587",
+                "fromName": "My Name",
+                "fromEmail": "example@email.com",
+                "toEmails": "example@email.com, example@email.com",
+                "cCEmails": "example@email.com, example@email.com",
+                "bccEmails": "example@email.com, example@email.com",
+                "replyToEmails": "example@email.com, example@email.com"
+            }
+        },
+        "Default": {
+            "fromEmail": "127.0.0.1",
+            "senderName": 27017,
+            "expiryinDays": 30
+        }
+    },
+    "emailconfig": {
+        "username": "example@email.com",
+        "password": "password",
+        "smtp": "smtp.gmail.com",
+        "smtpPort": "587",
+        "fromName": "My Name",
+        "fromEmail": "example@email.com",
+        "toEmails": "example@email.com, example@email.com",
+        "cCEmails": "example@email.com, example@email.com",
+        "bccEmails": "example@email.com, example@email.com",
+        "replyToEmails": "example@email.com, example@email.com"
+    },
+    "keys":{
+        "Secrete": "secret key to generate token for clients",
+        "AdminKey" : "admin secret key to authorize generate token request"
+    },
+    "ignoreRoutes": ["/admin/getKey"]
+}
