@@ -10,6 +10,7 @@ function getEmailData(emailData, clientId){
     returnData.cCEmails = check(emailData.cCEmails) ? emailData.cCEmails : emailConfigData.cCEmails;
     returnData.bccEmails = check(emailData.bccEmails) ? emailData.bccEmails : emailConfigData.bccEmails;
     returnData.replyToEmails = check(emailData.replyToEmails) ? emailData.replyToEmails : emailConfigData.replyToEmails;
+    returnData.priority = check(emailData.priority) ? emailData.priority : null;
     returnData.username = emailConfigData.username;
     returnData.password = emailConfigData.password;
     returnData.smtp = emailConfigData.smtp;
@@ -44,6 +45,7 @@ async function sendEmail(emailData, clientId){
             replyTo: emailConfigData.replyToEmails,
             cc: emailConfigData.cCEmails,
             bcc: emailConfigData.bccEmails,
+            priority: emailConfigData.priority,
             subject: emailData.subject, // Subject line
             text: emailData.textBody, // plain text body
             html: emailData.htmlBody, // html body
